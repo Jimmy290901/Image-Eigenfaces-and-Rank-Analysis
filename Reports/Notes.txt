@@ -1,0 +1,89 @@
+Rank and eigenfaces
+Last slide
+PCA explantion slides - required or not
+Title - Eigenfaces of Related Image
+Relation with ITS - How to relate with ITS? Where will this be used?
+
+
+Relation with ITS - It is the basis and at the core of image classification, can be used for various applications like vehicle plate recognition, identifying model of the vehicle, etc.
+
+
+Other Notes:
+(After front slide) Outline - Exploit Redundancy to compress Images
+			PCA - Image Compression and Image Redundancy
+				What is PCA (small intro)
+				Illustration of PCA
+			Problem statement
+			Preliminary Observations
+
+2 - Rectangle check rank (Remove Eigenfaces), more number of images to demonstrate redundancy and imp. of rank
+4 - what is PCA slide
+	How is PCA useful?
+		Minimizes information loss by exploiting redundancy
+		Remove 2nd pt
+		(Improve) Capturing comp. with maximum variability
+3 - (Title - SVD Decmp of Images) Image - Various columns, symmetry, redundancy, dimension, how top 20 singular values is compressing 2000 columns to 20 columns and how it is i (Spend more time on this slide)
+8th - Label axis on the graph	
+
+
+Problem statement - Show various transformations of image (Talk about laying foundation for image classfication)
+		Relationship between eigen of user inputted and img in database (for future works)
+
+
+Experiment Apparatus (Remove procedure (it is extra) )
+13th - Preliminary (low rank, less symmetry, etc. include all of that)
+12th - Work is still ongoing, but some glimpses from our observations
+------------------x-------------x---------------x---------------x---------------x--------------------x----------------------x---------------------x---------------------x---------------------------
+
+Summary of paper at the end (Only if someone asks questions about how what tools, etc you used)
+10th - Compress and intro (Procedure should come as extra slides at the end)
+
+
+Remove PCA (5,6,7,9 slide)
+
+Notes: 
+SVD can help in data compression and finding the principal components
+Rank of a matrix can tell us the number of significant eigenfaces required to express the original image precisely.
+
+
+
+Assymetrical Low Rank Image:
+	I
+
+
+Assymetrical High Rank Image:
+	Rotation: Number of significant eigenfaces increased little
+	HR: No Change
+	VR: ""
+	Scaling UP: Rank increased largely, number of significant eigenfaces remained same
+	Scaling DOWN: Rank increased number of significant eigenfaces remained same
+	Adding Noise: 
+		Low Noise: No Change
+		High Noise: Rank jumped to maximum, number of significant eigenfaces increased.
+
+Symmetrical Low rank Image:
+	Number of significant eigenfaces=2, rank = 18
+	Rotation: Number of significant eigenfaces increased with rotation
+	HR: No Change
+	VR: ""
+	Scaling UP: Rank increased by slight amount, number of significant eigenfaces remained same
+	Scaling DOWN: Rack decreased slightly, number of significant eigenfaces remained same
+	Adding Noise:
+		Low Noise: Rank increased slightly, no change in number of eigenfaces
+		High Noise: Rank jumped to maximum, number of significant eigenfaces remained same
+
+Symmetrical High Rank Image:
+	Number of significant eigenfaces = 23, rank = 131
+	Rotation: Number of significant eigenfaces increased with rotation
+	HR: No Change
+	VR: ""
+	Scaling UP: ""
+	Scaling DOWN: ""
+	Adding Noise:
+		Low Noise: No Change
+		High Noise: Rank jumped to maximum, number of significant eigenfaces remained same
+
+
+Prepare speech for presentation
+Get explanation about 6th slide from Devanshu
+Add noisy image of hearts

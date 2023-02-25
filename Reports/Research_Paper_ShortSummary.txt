@@ -1,0 +1,63 @@
+How is PCA useful?
+	1. Reduces Data Dimensionality
+	2. Improves interpretability for the data
+	3. Minimizes Information Loss while reducing dimensionality
+	4. The PC are adaptive as per the dataset provided, and not any pre-defined basis functions
+
+	a. Large datasets are increasingly common and are often difficult to interpret. Principal component analysis (PCA) is a technique 
+	for reducing the dimensionality of such datasets, increasing interpretability but at the same time minimizing information loss. 
+	b. It does so by creating new uncorrelated variables that successively maximize variance 
+		(by maximizing variance, we can prevent information loss due to dimensionality reduction and ensure high SNR). 
+	c. Finding such new variables, the principal components, reduces to solving an eigenvalue/eigenvector problem, 
+	and the new variables are defined by the dataset at hand, not a priori, hence making PCA an adaptive data analysis technique.
+
+	d. Its idea is simple—reduce the dimensionality of a dataset, while preserving as much ‘variability’ (i.e. statistical information) as possible.
+
+How to obtain Principal Components (PC) of the data?
+	1. It boils down to eigenvalue/eigenvector problem.
+	2. We can find PC by SVD of the centered data.
+
+How we are recording data in the matrix?
+Orthonormal basis set for expressing our data (Naive basis set - reflects method used to gather data)
+PCA asks - is there a better basis to re-express data (in other words, can we linearly transform our data to best re-express it)	
+	Idea/Concept Behind:
+		Took a matrix of linear transformation P such that, PX = Y, that transforms data X to data Y.
+		The rows in P are the new basis set.
+		The rows in P are considered as the principal components of X.
+	How to find P for better re-expression of X (i.e. Y)?
+		In order to select P, we've to look after what features we want in Y - Less Noise, Rotation and Redundancy
+		How to reduce Noise and Redundancy and maximize variance?
+			Covariance, i.e. Variance between 2 variables - Linear relationship between 2 variables
+			Larger covariance - high redundancy
+			Covariance Matrix, C_X - Finding Variance between every pair of variables
+				Diagonal entries - variance (maximize it, which reduces noise and increases signal)
+				Off-Diagonal Entries - covariance (redundancy, so minimize it)
+			We transform X to Y using principal components matrix P s.t PX = Y. So, we would desire C_Y to be a diagonlized matrix
+			Diagonalizing C_Y would maximize variance and reduce reducndancy
+		Our problem reduces to finding P s.t PX = Y and C_Y is diagonalized
+		How to find P?
+			After mathematical tweaking, we observe that P is the matrix containing eigenvectors of X(X^T)
+			In other words, we need to do the following steps to find P: -
+				1. Form matrix X from the data we have
+				2. Centralize the data in X (by subtracting off the means)
+				3. Do SVD of X and obtain orthonormal eigenvectors of X
+				4. These orthonormal eigenvectors will form the P matrix.
+	How is dimensionality reduced?
+		Diagonal entries in the C_Y matrix correspond to the ith PC
+		Often, the first k variances are the only ones large enough. And hence, we use only k PC associated with those k variances.
+		This minimizes the loss of information of our dataset.
+
+Eigenvectors decomp for image classificaion
+
+Eigen decomp. 
+Compression
+Redundancy
+
+What is eigenvectors got to do with imgs
+Eigenvecctors and img compressions
+What experiments you have done and how it is useful
+
+Rank of matrix changing with rotation angles (graph)
+
+Take different shapes
+		
